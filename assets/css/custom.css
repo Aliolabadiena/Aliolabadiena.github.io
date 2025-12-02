@@ -226,7 +226,7 @@ a:active {
     justify-content: center;
 
     background: #ef4444;       /* raudona */
-    color: #f9fafb;
+    color: #1bca41;
     box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
     border: 1px solid #fecaca;
 
@@ -245,15 +245,89 @@ a:active {
     line-height: 1;
 }
 
-/* hover / active */
+
 .scroll-top:hover {
-    background: #b91c1c;       /* tamsesnė raudona */
+    background: #b91c1c;      
     border-color: #fee2e2;
     opacity: 1;
     transform: translateY(-2px);
     box-shadow: 0 18px 40px rgba(15, 23, 42, 1);
 }
 
-.scroll-top:active {
-    transform: translateY(1px) scale(0.95);
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+section {
+  opacity: 0;
+  animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+@keyframes rainbowText {
+  0% { color: #ff0000; }
+  25% { color: #00ff00; }
+  50% { color: #00ffff; }
+  75% { color: #ff00ff; }
+  100% { color: #ff0000; }
+}
+
+h1, h2, h3 {
+  animation: rainbowText 4s linear infinite;
+}
+
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px #ff00ff, 0 0 50px #ff00ff;
+    transform: scale(1.08);
+  }
+}
+
+button:hover, .btn:hover {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px #ff00ff, 0 0 50px #ff00ff;
+    transform: scale(1.08);
+  }
+}
+
+button:hover, .btn:hover {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+
+@keyframes spinAndGlow {
+  0% { transform: rotate(0deg); color: #00ffff; filter: drop-shadow(0 0 5px #00ffff); }
+  50% { transform: rotate(180deg); color: #ff00ff; filter: drop-shadow(0 0 15px #ff00ff); }
+  100% { transform: rotate(360deg); color: #00ffff; filter: drop-shadow(0 0 5px #00ffff); }
+}
+
+.social-links a:hover i,
+.social-links a:hover svg {
+  animation: spinAndGlow 2s linear infinite;
+}
+
+
+
+

@@ -702,7 +702,49 @@
     </div>
 
   </div>
-</form>
+
+
+            </form>
+
+            <!-- Memory Game Section (JS) -->
+            <div class="mt-5" id="memory-game-section" data-aos="fade-up" data-aos-delay="250">
+              <div class="section-block memory-game-block">
+                <h3 class="mb-3">Atminties žaidimas</h3>
+
+                <div class="memory-controls d-flex flex-wrap align-items-center gap-3 mb-3">
+                  <div class="memory-difficulty">
+                    <span class="me-2 fw-semibold">Sudėtingumas:</span>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="mg-difficulty" id="mg-easy" value="easy" checked>
+                      <label class="form-check-label" for="mg-easy">Lengvas (4×3)</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="mg-difficulty" id="mg-hard" value="hard">
+                      <label class="form-check-label" for="mg-hard">Sunkus (6×4)</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex gap-2">
+                    <button type="button" id="mg-start" class="btn">Start</button>
+                    <button type="button" id="mg-reset" class="btn">Atnaujinti</button>
+                  </div>
+                </div>
+
+                <div class="memory-stats d-flex flex-wrap gap-2 mb-3" aria-label="Žaidimo statistika">
+                  <div class="stat-pill">Ėjimai: <strong id="mg-moves">0</strong></div>
+                  <div class="stat-pill">Bandymų: <strong id="mg-attempts">0</strong></div>
+                  <div class="stat-pill">Poros: <strong id="mg-pairs">0</strong>/<strong id="mg-total-pairs">0</strong></div>
+                </div>
+
+                <div id="mg-board" class="memory-board" aria-label="Atminties žaidimo lenta"></div>
+                <div id="mg-message" class="memory-message mt-3" role="status" aria-live="polite"></div>
+              </div>
+            </div>
+            <!-- /Memory Game Section -->
+
+
 
           </div><!-- End Contact Form -->
 
